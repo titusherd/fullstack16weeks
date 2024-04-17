@@ -4,17 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digimon</title>
+    <title>Pokemon</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-    <h1>DIGIMON</h1>
+<body class="font-['Karla']">
+    <header class="bg-yellow-300">
+        <div class="flex justify-between p-4 mx-52 items-center">
+            <img src="./assets/logo.png" alt="" class="h-16 w-auto">
+            <nav class="flex gap-8 text-xl">
+                <p>Home</p>
+                <p>Pokédex</p>
+                <p>Legedaries</p>
+                <p>Documentation</p>
+            </nav>
+        </div>
+    </header>
+    <section class="mx-52 flex flex-col justify-center my-12 items-center space-y-6">
+        <div>
+            <p class="text-3xl tracking-wider">200 <span class="font-bold">Pokemons</span> for you to choose your
+                favorite</p>
+        </div>
+        <input type="text" name="" id="" class="border-2 w-2/3 h-10 p-4" placeholder="search pokemon...">
+    </section>
 
-    <div id="digimonContainer" class="w-[600px] m-auto grid grid-cols-4 gap-4">
+    <section id="pokemonContainer" class="mx-28  grid grid-cols-3 gap-4 my-12"></section>
 
-    </div>
-
+    <!--  -->
+    <!-- <div id="pokemonCard" class="flex w-full gap-4">
+            <div id="details" class="space-y-3 p-2">
+                <p class="text-2xl font-bold">Bulbasaur</p>
+                <div class="flex gap-2">
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="border-green-500 border-2 w-min rounded-full p-2">
+                            <p class="">49</p>
+                        </div>
+                        <p class="text-green-500 font-bold">HP</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="border-red-500 border-2 w-min rounded-full p-2">
+                            <p class="">45</p>
+                        </div>
+                        <p class="font-bold text-red-500">Att</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="border-blue-500 border-2 w-min rounded-full p-2">
+                            <p class="">45</p>
+                        </div>
+                        <p class="text-blue-500 font-bold">Def</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="bg-green-300 rounded-lg px-2 font-bold text-black">Grass</p>
+                    <p class="bg-blue-300 rounded-lg px-2 font-bold text-black">Poison</p>
+                </div>
+            </div>
+            <div class="bg-green-200 p-8 rounded-r-lg">
+                <img src="https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/1.svg" alt=""
+                    class="h-28 w-60">
+            </div>
+        </div> -->
+    <!--  -->
     <script src="main.js"></script>
 </body>
 
