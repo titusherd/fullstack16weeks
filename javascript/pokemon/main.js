@@ -52,7 +52,7 @@ async function buildApp() {
         pokemonCard.classList.add('flex', 'w-full', 'gap-4', 'shadow-md', 'rounded-r-lg', 'hover:scale-105', 'cursor-pointer');
 
         pokemonCard.addEventListener('click', () => {
-            window.location.href = "./pokemon.html";
+            window.location.href = `./pokemon.html?id=${index + 1}`
         });
 
         // pokemon details
