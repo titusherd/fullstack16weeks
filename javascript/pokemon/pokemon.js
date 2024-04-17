@@ -7,7 +7,7 @@ let searchParams = new URLSearchParams(queryString);
 let id = searchParams.get('id');
 
 
-const API_ENDPOINT = "https://pokeapi.co/api/v2/pokemon-form/";
+const API_ENDPOINT = "https://pokeapi.co/api/v2/pokemon-form/1";
 const container = document.getElementById('container');
 
 async function fetchForm() {
