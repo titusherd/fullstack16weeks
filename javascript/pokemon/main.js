@@ -49,11 +49,15 @@ async function buildApp() {
 
         // pokemon card
         const pokemonCard = document.createElement('div');
-        pokemonCard.classList.add('flex', 'w-full', 'gap-4', 'shadow-md');
+        pokemonCard.classList.add('flex', 'w-full', 'gap-4', 'shadow-md', 'rounded-r-lg', 'hover:scale-105', 'cursor-pointer');
+
+        pokemonCard.addEventListener('click', () => {
+            window.location.href = `./pokemon.html?id=${index + 1}`
+        });
 
         // pokemon details
         const pokemonDetails = document.createElement('div');
-        pokemonDetails.classList.add('space-y-3', 'p-2');
+        pokemonDetails.classList.add('space-y-3', 'p-4', 'w-40', 'flex', 'flex-col', 'justify-center');
 
         // pokemon name
         const name = document.createElement('h2');
