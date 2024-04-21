@@ -30,7 +30,6 @@ edit.addEventListener('click', () => {
 })
 
 
-
 const container = document.getElementById("container")
 const img = document.getElementById("image")
 const title = document.getElementById("title")
@@ -38,8 +37,21 @@ const date = document.getElementById("date")
 const category = document.getElementById("category")
 const content = document.getElementById("content")
 const remove = document.getElementById("remove")
-
 const submit = document.getElementById("submit")
+
+remove.addEventListener('click', async () => {
+    const response = await fetch("https://v1.appbackend.io/v1/rows/1j0JvNsLpeXF", {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([id])
+    })
+    if (response.ok) {
+        window.location.href = `index.html`
+    }
+})
+
 
 
 async function buildApp() {
