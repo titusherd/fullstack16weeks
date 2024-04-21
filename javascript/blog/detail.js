@@ -84,17 +84,6 @@ async function buildApp() {
             window.location.href = `index.html`
         }
     })
-
-
-    remove.addEventListener('click', async () => {
-        fetch("https://v1.appbackend.io/v1/rows/1j0JvNsLpeXF", {
-            method: "DELETE",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(["6492ea8ee59c52d913d8ca56", "6492ea8ee59c52d913d8cdsc3"])
-        })
-    })
 }
 
 buildApp()
