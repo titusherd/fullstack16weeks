@@ -39,6 +39,9 @@ const category = document.getElementById("category")
 const content = document.getElementById("content")
 const remove = document.getElementById("remove")
 
+const submit = document.getElementById("submit")
+
+
 async function buildApp() {
     const data = await fetchData()
     console.log(data)
@@ -57,15 +60,29 @@ async function buildApp() {
     editCategory.value = data.category
     editContent.value = data.content
 
-    
-    // remove.addEventListener('click', async () => {
-    //     const response = await fetch(API_ENDPOINT + id, {
-    //         method: 'DELETE'
-    //     })
-    //     if (response.ok) {
-    //         window.location.href = `index.html`
-    //     }
-    // })
+    submit.addEventListener('click', async () => {
+        const response = await fetch("https://v1.appbackend.io/v1/rows/1j0JvNsLpeXF", {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "_id": data._id, "title": editTitle.value, "content": editContent.value, "category": editCategory.value })
+        })
+        if (response.ok) {
+            window.location.href = `index.html`
+        }
+    })
+
+
+    remove.addEventListener('click', async () => {
+        fetch("https://v1.appbackend.io/v1/rows/1j0JvNsLpeXF", {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(["6492ea8ee59c52d913d8ca56", "6492ea8ee59c52d913d8cdsc3"])
+        })
+    })
 }
 
 buildApp()

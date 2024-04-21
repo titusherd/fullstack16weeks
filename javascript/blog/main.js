@@ -8,6 +8,39 @@ async function fetchData() {
 
 const cardContainer = document.getElementById("cardContainer")
 
+const myModal = document.getElementById("myModal")
+const closeModal = document.getElementById("closeModal")
+const submitButton = document.getElementById("submit")
+const addThought = document.getElementById("addThought")
+
+closeModal.addEventListener('click', () => {
+    myModal.classList.add('hidden')
+})
+
+addThought.addEventListener('click', () => {
+    myModal.classList.remove('hidden')
+})
+
+const newTitle = document.getElementById("newTitle")
+const newCover = document.getElementById("newImage")
+const newCategory = document.getElementById("newCategory")
+const newContent = document.getElementById("newContent")
+
+submitButton.addEventListener('click', async () => {
+
+
+    const response = await fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([{ "title": newTitle.value, "cover": newCover.value, "category": newCategory.value, "content": newContent.value }])
+    })
+    if (response.ok) {
+        window.location.reload()
+    }
+})
+
 async function buildApp() {
     const fetchedData = await fetchData()
     const datas = fetchedData.data
