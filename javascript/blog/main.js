@@ -17,6 +17,9 @@ async function buildApp() {
 
         const card = document.createElement('div')
         card.classList.add('flex', 'gap-8', 'bg-neutral-900', 'px-8', 'py-6', 'rounded-lg', 'cursor-pointer', 'hover:opacity-80', 'transition', 'duration-700', 'ease-in-out')
+        card.addEventListener('click', () => {
+            window.location.href = `detail.html?id=${data._id}`
+        })
 
         const imgContainer = document.createElement('div')
         imgContainer.classList.add('w-5/12')
@@ -67,9 +70,6 @@ async function buildApp() {
 
         cardContainer.append(card)
     });
-
-
-
 }
 
 buildApp();
@@ -94,3 +94,4 @@ buildApp();
         </div>
     </div>
 </div> */}
+
