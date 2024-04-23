@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="my-32">
+    <main class="w-[600px] m-auto grid">
+
+        <h1 class="font-bold text-4xl">Password Generator</h1>
+
+        <input id="password-length" type="number" class="p-2 border-2 rounded-lg my-4"
+            placeholder="input password length">
+
+        <label for="" class="font-semibold">Your Password</label>
+        <input id="password" type="text" class="p-2 border-2 rounded-lg mb-6" disabled>
+
+        <button id="generate-button"
+            class="px-8 py-2 bg-blue-600 text-xl text-white font-semibold rounded-lg">Generate</button>
+    </main>
+    <script src="./dist/main.js"></script>
+</body>
+
+</html>
