@@ -554,7 +554,13 @@ video {
   --tw-contain-style:  ;
 }
 
+/* nav */
+
 .nav-link {
+  display: block;
+  display: flex;
+  width: 100%;
+  align-items: center;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-size: 0.875rem;
@@ -566,6 +572,12 @@ video {
 .nav-link:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.nav-title {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 /* card */
@@ -631,14 +643,6 @@ video {
   font-weight: 700;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.bottom-8 {
-  bottom: 2rem;
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -653,11 +657,6 @@ video {
 
 .m-auto {
   margin: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .mb-16 {
@@ -676,24 +675,24 @@ video {
   display: grid;
 }
 
-.h-64 {
-  height: 16rem;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-screen {
-  height: 100vh;
+.h-64 {
+  height: 16rem;
 }
 
 .h-8 {
   height: 2rem;
 }
 
-.h-4 {
-  height: 1rem;
+.h-screen {
+  height: 100vh;
 }
 
-.h-5 {
-  height: 1.25rem;
+.w-8 {
+  width: 2rem;
 }
 
 .w-\[750px\] {
@@ -702,18 +701,6 @@ video {
 
 .w-auto {
   width: auto;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.w-5 {
-  width: 1.25rem;
 }
 
 .grid-cols-12 {
@@ -744,10 +731,6 @@ video {
   gap: 1rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -760,12 +743,12 @@ video {
   margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-b-2 {
@@ -799,10 +782,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -820,10 +799,6 @@ video {
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-extralight {
-  font-weight: 200;
 }
 
 .font-semibold {

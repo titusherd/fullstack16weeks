@@ -3,8 +3,16 @@
 @tailwind utilities;
 
 @layer components {
+  /* nav */
   .nav-link {
-    @apply font-semibold text-sm p-2 hover:bg-gray-200 rounded-lg duration-200;
+    @apply block w-full flex items-center font-semibold text-sm p-2 hover:bg-gray-200 rounded-lg duration-200;
+  }
+
+  .nav-title {
+    @apply font-semibold text-gray-400;
+  }
+  .nav-link-active {
+    @apply font-semibold text-sm p-2 bg-gray-200 rounded-lg;
   }
 
   /* card */
