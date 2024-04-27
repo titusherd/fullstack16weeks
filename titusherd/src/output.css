@@ -566,6 +566,46 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.card-link {
+  display: grid;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition-duration: 200ms;
+}
+
+.card-link:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.card-tag {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.card-title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.card-date {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.card-read-time {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -578,12 +618,12 @@ video {
   grid-column: span 7 / span 7;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.flex {
+  display: flex;
 }
 
 .grid {
@@ -598,10 +638,16 @@ video {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -614,24 +660,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-96 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(24rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(24rem * var(--tw-space-y-reverse));
 }
 
 .border-r-2 {

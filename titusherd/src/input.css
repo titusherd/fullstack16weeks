@@ -6,4 +6,20 @@
   .nav-link {
     @apply p-2 font-bold hover:bg-gray-200 rounded-lg duration-200;
   }
+  .card-link {
+    @apply p-4 hover:bg-gray-300 rounded-lg grid gap-3 duration-200;
+  }
+
+  .card-tag {
+    @apply text-sm text-gray-500;
+  }
+  .card-title {
+    @apply text-lg font-bold;
+  }
+  .card-date {
+    @apply text-sm text-gray-500;
+  }
+  .card-read-time {
+    @apply text-sm text-gray-500;
+  }
 }
