@@ -11,6 +11,7 @@
 <body>
     <main class="grid grid-cols-12 h-screen">
         <div class="col-span-2 border-r-2 p-4"> <!-- md:col-span-6 lg:col-span-4 -->
+
             <h1 class="font-bold text-xl mb-6">titusherd.</h1>
             <div class="flex flex-col gap-4">
                 <div id="titusherd" class="space-y-0.5">
@@ -23,7 +24,7 @@
                     <p class="nav-title">Companies</p>
                     <a id="" class="nav-link" href="">Lorem ipsum</a>
                     <a id="" class="nav-link" href="">Lorem ipsum</a>
-                    <a href="https://sawargy.github.io/">
+                    <a href="https://sawargy.github.io/" target="_blank">
                         <p class="nav-link">Sawargy</p>
                     </a>
                 </div>
@@ -80,30 +81,13 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="mx-16">
+                    <p id="information" class="text-3xl"></p>
+                </div>
 
 
-                    <div id="content" class="">
-                        <!-- <div class="w-[650px] m-auto">
-                            <div>
-                                <p id="information" class="text-xl"></p>
-                            </div>
-                            <div class="absolute top-44">
-                                <div class="absolute top-4 space-y-2 w-[650px] p-4 flex flex-col gap-4">
-                                    <div class="space-y-1">
-                                        <h3 class="text-2xl font-bold">titusherd.com</h3>
-                                        <p class="text-gray-500 italic"> Fullstack Developer</p>
-                                    </div>
-                                    <div>
-                                        <p>Hi! My name is Titus Herdiawan and I'm a multi-disciplinary product and full
-                                            stack
-                                            developer from Bandung, Indonesia. 🇮🇩
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
+                <div id="content" class="">
+
                 </div>
 
 
@@ -133,15 +117,105 @@
                     </article>
                 </div> -->
                 <!--  -->
-
-
-
             </div>
         </div>
     </main>
 
-    <!-- <script src="index.js"></script> -->
     <script src="../dist/bundle.js"></script>
+    <script>const homeNav = document.getElementById('home-nav');
+        const aboutNav = document.getElementById('about-nav');
+        const contactNav = document.getElementById('contact-nav');
+
+
+        function changeContent(page) {
+            var contentDiv = document.getElementById('content');
+            switch (page) {
+                case 'home':
+                    contentDiv.innerHTML = '';
+
+                    contentDiv.classList.add('absolute', 'top-44', 'w-[750px]', 'p-4', 'mx-40', 'space-y-5', 'flex', 'flex-col', 'gap-2')
+
+                    homeNav.classList.add('bg-black', 'text-white');
+                    aboutNav.classList.remove('bg-black', 'text-white');
+                    contactNav.classList.remove('bg-black', 'text-white');
+
+                    const name = document.createElement('p')
+                    name.classList.add('text-2xl', 'font-bold')
+                    const role = document.createElement('p')
+                    role.classList.add('text-gray-500', 'italic')
+                    const bio = document.createElement('p')
+                    bio.classList.add('text-gray-500', 'italic')
+                    const subscribe = document.createElement('p')
+                    subscribe.classList.add('w-fit', 'px-3', 'py-2', 'bg-blue-600', 'text-white', 'font-bold', 'rounded-lg')
+
+                    name.textContent = 'Titus Herdiawan'
+                    role.textContent = 'Fullstack Developer'
+                    bio.textContent = `Hi! My name is Titus Herdiawan and I'm a multi-disciplinary product and full stack developer from Bandung, Indonesia. 🇮🇩`
+                    subscribe.textContent = 'Subscribe'
+
+                    contentDiv.append(name, role, bio, subscribe)
+                    console.log(contentDiv);
+                    break;
+                case 'about':
+                    homeNav.classList.remove('bg-black', 'text-white');
+                    aboutNav.classList.add('bg-black', 'text-white');
+                    contactNav.classList.remove('bg-black', 'text-white');
+                    contentDiv.innerHTML = `
+                        <h2>About Us</h2>
+                        <p>
+                        This is the about page content. Learn more 
+                        about our purpose and team.
+                        </p>
+                        <p>
+                        We're passionate about creating engaging and
+                        informative SPAs.
+                        </p>
+                        `;
+                    break;
+                case 'contact':
+                    contentDiv.innerHTML = '';
+
+                    contactNav.classList.add('bg-black', 'text-white');
+                    homeNav.classList.remove('bg-black', 'text-white');
+                    aboutNav.classList.remove('bg-black', 'text-white');
+
+                    contentDiv.classList.add('w-[750px]', 'p-4', 'm-auto', 'space-y-5', 'flex', 'flex-col', 'gap-2')
+
+                    const titleInput = document.createElement('h1')
+                    titleInput.classList.add('text-5xl', 'font-bold')
+                    titleInput.textContent = 'Available for full-stack projects'
+
+                    const nameInput = document.createElement('input')
+                    nameInput.classList.add('border-2', 'border-neutral-300', 'p-2.5')
+                    nameInput.placeholder = 'Your Name'
+
+                    const emailInput = document.createElement('input')
+                    emailInput.classList.add('border-2', 'border-neutral-300', 'p-2.5')
+                    emailInput.placeholder = 'Email'
+
+                    const entityInput = document.createElement('input')
+                    entityInput.classList.add('border-2', 'border-neutral-300', 'p-2.5')
+                    entityInput.placeholder = 'Personal / Entity Name'
+
+                    const timeFrameInput = document.createElement('input')
+                    timeFrameInput.classList.add('border-2', 'border-neutral-300', 'p-2.5')
+                    timeFrameInput.placeholder = 'Within months'
+
+                    const projectBriefInput = document.createElement('textarea')
+                    projectBriefInput.classList.add('border-2', 'border-neutral-300', 'p-2.5')
+                    projectBriefInput.placeholder = 'Tell me about who yourself, project objective, when do you need it, and if you are familiar with domain, hosting, etc.'
+
+                    const submitButton = document.createElement('button')
+                    submitButton.classList.add('p-2', 'bg-blue-600', 'text-white', 'rounded-lg')
+                    submitButton.textContent = 'Submit'
+
+                    contentDiv.append(titleInput, nameInput, emailInput, entityInput, timeFrameInput, projectBriefInput, submitButton)
+
+                    break;
+                default:
+                    contentDiv.innerHTML = '<h2>Page not found!</h2>';
+            }
+        }</script>
 </body>
 
 </html>
