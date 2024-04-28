@@ -14,18 +14,18 @@
             <h1 class="font-bold text-xl mb-6">titusherd.</h1>
             <div class="flex flex-col gap-4">
                 <div id="titusherd" class="space-y-0.5">
-                    <a href="" class="nav-link">Home</a>
-                    <a href="" class="nav-link">Taughts</a>
-                    <a href="" class="nav-link">About</a>
-                    <a href="" class="nav-link bg-black text-white">Contact</a>
+                    <a id="home-nav" href="#home" onclick="changeContent('home')" class="nav-link">Home</a>
+                    <a id="about-nav" href="#about" onclick="changeContent('about')" class="nav-link">About</a>
+                    <a id="taughts" href="#taughts" class="nav-link">Taughts</a>
+                    <a id="contact-nav" href="#contact" onclick="changeContent('contact')" class="nav-link">Contact</a>
                 </div>
                 <div id="companies" class="space-y-0.5">
                     <p class="nav-title">Companies</p>
-                    <!-- <p class="nav-link"><a href="https://sawargy.github.io/">Sawargy</a></p> -->
-                    <a class="nav-link" href="">Coming Soon!</a>
-                    <a class="nav-link" href="">Coming Soon!</a>
-                    <div></div>
-                    <a class="nav-link" href="https://sawargy.github.io/" target="_blank">Sawargy</a>
+                    <a id="" class="nav-link" href="">Lorem ipsum</a>
+                    <a id="" class="nav-link" href="">Lorem ipsum</a>
+                    <a href="https://sawargy.github.io/">
+                        <p class="nav-link">Sawargy</p>
+                    </a>
                 </div>
                 <div id="socials" class="space-y-0.5">
                     <p class="nav-title">Socials</p>
@@ -33,7 +33,10 @@
                     <a href="" class="nav-link">Twitter</a>
                     <a href="" class="nav-link">Instagram</a>
                 </div>
-
+            </div>
+            <div class="my-8">
+                <button
+                    class="border-2 w-8/12 bottom-3 py-2 bg-blue-600 text-white font-bold rounded-xl">Subscribe</button>
             </div>
         </div>
 
@@ -77,7 +80,35 @@
                     </div>
                 </div>
 
-                <div class="post w-[750px] m-auto px-8 flex flex-col gap-4">
+                <div>
+
+
+                    <div id="content" class="">
+                        <!-- <div class="w-[650px] m-auto">
+                            <div>
+                                <p id="information" class="text-xl"></p>
+                            </div>
+                            <div class="absolute top-44">
+                                <div class="absolute top-4 space-y-2 w-[650px] p-4 flex flex-col gap-4">
+                                    <div class="space-y-1">
+                                        <h3 class="text-2xl font-bold">titusherd.com</h3>
+                                        <p class="text-gray-500 italic"> Fullstack Developer</p>
+                                    </div>
+                                    <div>
+                                        <p>Hi! My name is Titus Herdiawan and I'm a multi-disciplinary product and full
+                                            stack
+                                            developer from Bandung, Indonesia. 🇮🇩
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+
+                <!-- Beginner-friendly journey to learn javascript from basics. -->
+                <!-- <div class="post w-[750px] m-auto px-8 flex flex-col gap-4">
                     <p class="post-tag">Javascript</p>
                     <p class="post-title">Beginner-friendly journey to learn javascript from basics.</p>
                     <div class="flex text-sm gap-4 items-center">
@@ -88,36 +119,29 @@
                     </div>
                     <article class="flex flex-col gap-4">
                         <p class="italic border-b-2 pb-2">Data type, Variable, Operator, Conditional, Loop</p>
-
                         <img src="https://images.unsplash.com/photo-1537884944318-390069bb8665?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="" class="rounded-lg h-64 object-cover w-auto">
                         <p class="font-semibold text-lg">Programming</p>
                         <p> Programming is the process of creating a set of instructions that tell a computer how to
                             perform a task.</p>
                         <p class="font-semibold text-lg">Javascript</p>
-                        <p>Programming language that is one of the core technologies of the World Wide Web, alongside
-                            HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage
+                        <p>Programming language that is one of the core technologies of the World Wide Web,
+                            alongside
+                            HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for
+                            webpage
                             behavior, often incorporating third-party libraries</p>
                     </article>
-                    <article class="flex flex-col gap-4">
-                        <p class="italic border-b-2 pb-2">Data type, Variable, Operator, Conditional, Loop</p>
+                </div> -->
+                <!--  -->
 
-                        <img src="https://images.unsplash.com/photo-1537884944318-390069bb8665?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="" class="rounded-lg h-64 object-cover w-auto">
-                        <p class="font-semibold text-lg">Programming</p>
-                        <p> Programming is the process of creating a set of instructions that tell a computer how to
-                            perform a task.</p>
-                        <p class="font-semibold text-lg">Javascript</p>
-                        <p>Programming language that is one of the core technologies of the World Wide Web, alongside
-                            HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage
-                            behavior, often incorporating third-party libraries</p>
-                    </article>
-                </div>
+
 
             </div>
-
         </div>
     </main>
+
+    <script src="index.js"></script>
+    <script src="../dist/bundle.js"></script>
 </body>
 
 </html>
