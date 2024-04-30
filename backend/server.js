@@ -8,5 +8,5 @@ app.listen(port);
 // routing
 app.get('/', (req, res) => {
     res.send('Hello World!');
-}
-);
+});
+
