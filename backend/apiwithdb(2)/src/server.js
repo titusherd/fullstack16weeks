@@ -24,6 +24,11 @@ app.post('/notes', async (req, res) => {
     res.send(savedNote);
 });
 
+app.get("/notes/:id", async (req, res) => {
+    const note = await Note.findById(req.params.id);
+    res.send(note);
+});
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
