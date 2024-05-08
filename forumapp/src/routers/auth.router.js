@@ -1,12 +1,11 @@
-const express = require('express')
-const authRouter = express() // Create a new router
+const express = require('express');
+const handleRegister = require('../controllers/register.controller');
+const auth = express() // Create a new router
 
-authRouter.get('/login', (req, res) => {
+auth.get('/login', (req, res) => {
     res.send('Login')
 });
 
-authRouter.get('/register', (req, res) => {
-    res.send('Register')
-});
+auth.post('/register', handleRegister);
 
-module.exports = authRouter;
+module.exports = auth;
