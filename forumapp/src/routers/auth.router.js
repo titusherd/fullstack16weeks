@@ -1,10 +1,9 @@
 const express = require('express');
 const handleRegister = require('../controllers/register.controller');
+const handleLogin = require('../controllers/login.controller');
 const auth = express() // Create a new router
 
-auth.get('/login', (req, res) => {
-    res.send('Login')
-});
+auth.post('/login', handleLogin); 
 
 auth.post('/register', handleRegister);
 
