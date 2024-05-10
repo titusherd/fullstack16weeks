@@ -15,9 +15,10 @@ mongoose.connect('mongodb+srv://titus17001:UfEf5LkwPuy9sVSO@cluster0.ex445su.mon
 app.use(express.json()); // Make sure it comes back as json 
 app.use(cookieParser());
 
+app.use(authRouter); // Use the auth router
+
 app.use(middleware);
 
-app.use(authRouter); // Use the auth router
 app.use(replyRouter);
 app.use(threadRouter);
 
