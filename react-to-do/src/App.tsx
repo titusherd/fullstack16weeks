@@ -1,10 +1,11 @@
-import { Todolist } from "./components/todolist";
+// import { Todolist } from "./components/archived/todolist";
+import { Parent } from "./components/parent";
 
 export const App = () => {
   return (
     <>
-      <div>App</div>;
-      <Todolist />
+      <div>App</div>
+      <Parent />
     </>
   );
 };
