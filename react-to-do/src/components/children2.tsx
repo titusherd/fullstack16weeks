@@ -1,8 +1,11 @@
 import { useContext } from "react";
-import { DataContext } from "./parent";
+import { DataContext, IDataContext } from "./parent";
 
 export const Children2 = () => {
-  const { username } = useContext(DataContext);
+  //   const { username } = useContext(DataContext);
+  const context = useContext(DataContext);
+  const { username } = context as IDataContext;
+  
   return (
     <>
       <div>Children2</div>
