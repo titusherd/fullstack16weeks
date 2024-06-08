@@ -1,3 +1,5 @@
+import { NotesApp } from "./notes/components";
+
 export const App = () => {
-  return <div>App</div>;
+  return <NotesApp />;
 };
